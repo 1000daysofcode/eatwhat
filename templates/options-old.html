@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Find a food
+{% endblock %}
+
+{% block main %}
+    <h2 style="text-align:center">Recommendations</h2>
+    <br/>
+    <div action="/" method="post">
+        <div class="row-container">
+            <div id="content" style="margin:0;padding:0" class='row'>
+                <div class="options_fit">
+                    <div class="food-item">
+                    <p style="font-size:1.25rem">{{ choices[0]['name'] }} from {{ choices[0]['country'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <p><b>Tastes</b> {{ choices[0]['tastes'] }} ║ <b>Contains</b> {{ choices[0]['contains'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <p>{{ choices[0]['description'] }}</p>
+                    </div>
+                    <div id="place_button" class="item">
+                    <input class="def-button" type="button" value="Restaurants" onclick="location='{{ choices[0]['link'] }}'" style="float:left"></input>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <img class="form_img" id="option-img" src="static/assets/options/{{ choices[0]['image'] }}" height="200px" width="200px">
+            </div>
+        </div>
+        <br>
+        <div class="row-container">
+            <div id="content" class='row'>
+                <div class="options_fit">
+                    <div class="food-item">
+                    <p style="font-size:1.25rem">{{ choices[1]['name'] }} from {{ choices[1]['country'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <p><b>Tastes</b> {{ choices[1]['tastes'] }} ║ <b>Contains</b> {{ choices[1]['contains'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <p>{{ choices[1]['description'] }}</p>
+                    </div>
+                    <div id="place_button" class="item">
+                    <input class="def-button" type="button" value="Restaurants" onclick="location='{{ choices[1]['link'] }}'" style="float:left"></input>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <img class="form_img" id="option-img" src="static/assets/options/{{ choices[1]['image'] }}" height="200px" width="200px">
+            </div>
+        </div>
+        <div class="row-container">
+            <div id="content" class='row' style="padding-bottom:10px">
+                <div class="options_fit">
+                    <div class="food-item">
+                    <p style="font-size:1.25rem">{{ choices[2]['name'] }} from {{ choices[2]['country'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <p><b>Tastes</b> {{ choices[2]['flavors'] }} ║ <b>Contains</b> {{ choices[2]['contains'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <p>{{ choices[1]['description'] }}</p>
+                    </div>
+                    <div id="place_button" class="item">
+                    <input class="def-button" type="button" value="Restaurants" onclick='{{ choices[2]['link'] }}' style="float:left"></input>
+                    </div>
+                </div>
+            </div>
+            <div style="float:right" class='form-row'>
+                <img class="form_img" id="option-img" src='{{ choices[2]['image'] }}' height="200px" width="200px">
+            </div>
+        </div>
+        <div id="phase1-time" class='item'>
+            <div style="text-align:center">
+            Want to see other options?
+            </div>
+        </div>
+        <div id="p1-button-container">
+            <input class="def-button" id="phase1-button" type="button" value="Keep Looking"></input>
+        </div>
+    </div>
+{% endblock %}

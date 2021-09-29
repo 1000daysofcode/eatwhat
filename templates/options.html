@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Find a food
+{% endblock %}
+
+{% block main %}
+    <h2 style="text-align:center">Recommendations</h2>
+    <br/>
+    <div action="/" method="post">
+        <!-- Iterate through and display returned results -->
+        {% for food in choices %}
+        <div class="row-container">
+            <div id="content" class='row'>
+                <div class="options_fit">
+                    <div class="food-item">
+                    <!-- Display food name and country of origin -->
+                    <p style="font-size:1.25rem">{{ food['name'] }} from {{ food['country'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <!-- Display flavors contained in food and ingredients -->
+                    <p><b>Tastes</b> {{ food['tastes'] }} ║ <b>Contains</b> {{ food['contains'] }}</p>
+                    </div>
+                    <div class="food-item">
+                    <!-- Display description of food. -->
+                    <p>{{ food['description'] }}</p>
+                    </div>
+                    <div id="place_button" class="item">
+                    <!-- Prepare a link within a button to a list of restaraunts -->
+                    <input class="def-button" type="button" value="Restaurants" onclick="location='{{ food['link'] }}'" style="float:left"></input>
+                    </div>
+                </div>
+            </div>
+            <!-- Display an image of the food -->
+            <div class='row'>
+                <img class="form_img" id="option-img" src="static/assets/options/{{ food['image'] }}" height="200px" width="200px">
+            </div>
+        </div>
+        {% endfor %}
+        <div id="phase1-time" class='item'>
+            <div style="text-align:center;padding-top:10px">
+            <!-- {{ choices.links }} -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

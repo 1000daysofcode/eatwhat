@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+    <div  class="item" style="text-align:center"><p>Oh no- there was an error!<br><br>{{ error }}</p></div>
+    <div>{{ choices }} || {{ flavorinfo }}</div>
+    <img id="def-error" src="../static/assets/error.png" width="100%" height="auto">
+
+    <!--<img class="form_img" src="../static/assets/comingsoon.jpg" width="99%" height="auto">-->
+{% endblock %}

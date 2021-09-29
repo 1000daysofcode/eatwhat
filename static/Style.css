@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Livvic:400,600&display=swap');
+
+/* -------------- background image------------- */
+
+body{
+    margin: 0%;
+    background: url(./assets/emy-food.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* ------------------ navbar ----------------- */
+
+a{
+    text-decoration: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.text-black{
+    color: #0f0f0f;
+}
+
+nav{
+    padding: 0 2rem;
+    background: #c5c7c4;
+    position: relative;
+    justify-content: space-between;
+    height: 0;
+    min-height: 10vh;
+    overflow-y: hidden;
+    transition: all .7s ease;
+}
+
+nav .nav-brand a{
+    display: block;
+    padding: 1rem .5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6rem;
+}
+
+nav .nav-items{
+    list-style-type: none;
+    margin: 0;
+}
+
+nav .nav-items .nav-link{
+    padding: 1.3rem 1rem;
+    font-family: 'Livvic', sans-serif;
+    font-size: 1.1rem;
+}
+
+nav .nav-items .nav-link:hover{
+    background: var(--bg-color);
+}
+
+nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+nav .toggle-collapse{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+nav .toggle-collapse .toggle-icons{
+    display: flex;
+    top: 0;
+    right: 0;
+    height: 1.5rem;
+    width: auto;
+    color: black;
+    justify-content: flex-end;
+    padding: .7rem 1rem;
+}
+
+nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+}
+
+.collapse{
+    height: 22rem;
+}
+
+/* ---------------- responsive display --------------- */
+
+@media only screen and (max-width:810px){
+    /* Navigation style */
+    nav .nav-items{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column !important;
+        display:block !important;
+    }
+    nav .toggle-collapse{
+        display: inline;
+    }
+    /* Choose page style */
+    #content{
+        display: block!important;
+        text-align: center;
+        padding: 0;
+    }
+    .item{
+        display: flex;
+    }
+    .form_img{
+        width: 97.5%;
+        height: auto;
+    }
+    .row-container{
+        display: block!important;
+    }
+    .row{
+        display: block!important;
+    }
+    #phase1-button{
+        display: block!important;
+    }
+    #phase1-time{
+        display: block!important;
+    }
+    #time-padding{
+        padding-left: 2.25rem;
+    }
+
+    /* Results page style */
+    #option-img{
+        padding-bottom: 1.25rem!important;
+        border-bottom: 1px solid #545454;
+    }
+    #place_button{
+        display: block!important;
+    }
+    /* About page style */
+    .about_img{
+        width: 95%;
+        height: auto;
+    }
+}
+
+/* ------------------ main page wrapper ----------------- */
+
+.main-wrapper{
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 6vh;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 12vh;
+    opacity: .95;
+    padding: 2rem;
+}
+
+/* ---------------- choose (home) page --------------- */
+
+#content{
+    flex-direction: column;
+    flex: 1;
+}
+
+.def-form{
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.def-button{
+    font-size: 1.3rem;
+    margin:0 auto;
+    display:block;
+}
+
+.food-item.item{
+    padding-right: 3px;
+    font-size: 1rem;
+}
+
+.form_img{
+    padding: 5px;
+}
+
+.item{
+    padding-right: 3px;
+    font-size: 1.5rem;
+}
+
+#p1-button-container{
+    padding: 15px;
+}
+
+.row{
+    display: inline-block;
+}
+
+.row-container{
+    display: flex;
+}
+
+.section_fit{
+    padding: 2.25rem;
+}
+
+section p {
+	font-size: 1em;
+    color: white;
+	padding: 2rem;
+}
+
+/* ---------------- results (foods) page --------------- */
+
+.options_fit{
+    padding-left: .75rem
+}
+
+/* ---------------- contact form --------------- */
+
+/* Style inputs with type="text"/email, select elements and textareas */
+input[type=text], select, textarea, input[type=email] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When hovering over submit, change color to grey */
+input[type=submit]:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* Add a background color and padding */
+.container {
+  border-radius: 4px;
+  background-color: #c5c7c4;
+  margin: -10px;
+  padding: 2%;
+  opacity: 1.5;
+}
+
+/* ---------------- about page --------------- */
+
+#about_container {
+    text-align: center;
+}
+
+.about_p {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+/* ------------------ footer ----------------- */
+
+footer {
+	align-items: center;
+	background-color: #262626;
+	bottom: 0;
+	display: flex;
+	height: 6vh;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+footer .footer-text{
+    color: #666666;
+    padding-left: 1rem;
+    font-size: 100%;
+}

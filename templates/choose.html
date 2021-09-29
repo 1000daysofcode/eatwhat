@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Find a food
+{% endblock %}
+
+{% block main %}
+    <h2 style="text-align:center">Hungry? EatWhat?</h2>
+    <br/>
+    <form id="choice-1" action="/" method="post">
+        <!-- Choose 1-3 flavors with checkbox -->
+        <div class="row-container">
+            <div id="content" class='row' style="padding-bottom:10px">
+                <fieldset style="padding-left:2.25rem">
+                    <legend class="item">Pick 1-3 flavors</legend>
+                    <div class="item">
+                        <input type="checkbox" class="flavor" name="flavor" value="sweet">
+                        <label for="sweet">Sweet</label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" class="flavor" name="flavor" value="salty">
+                        <label for="salty">Salty</label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" class="flavor" name="flavor" value="umami">
+                        <label for="umami">Umami</label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" class="flavor" name="flavor" value="sour">
+                        <label for="sour">Sour</label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" class="flavor" name="flavor" value="bitter">
+                        <label for="bitter">Bitter</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div style="float:right" class='form-row'>
+                <img class="form_img" src="../static/assets/tastes.jpeg" height="180px" width="180px">
+            </div>
+        </div>
+        <!-- Choose whether food is solid, soft or no preference -->
+        <div class="row-container">
+            <div id="content" class='row'>
+                <fieldset class="section_fit">
+                    <legend class="item">Solid food or soft?</legend>
+                    <div class="item">
+                    <input type="radio" id="no-pref" name="hardness" value="no-pref">
+                    <label for="html">Anything</label>
+                    </div>
+                    <div class="item">
+                    <input type="radio" id="solid" name="hardness" value="solid">
+                    <label for="solid">Solid food</label>
+                    </div>
+                    <div class="item">
+                    <input type="radio" id="soft" name="hardness" value="soft">
+                    <label for="soft">Soft food</label>
+                    </div>
+                </fieldset>
+            <br>
+            </div>
+            <div class='row'>
+                <img class="form_img" src="../static/assets/solid.jpeg" height="180px" width="180px">
+            </div>
+        </div>
+        <!-- Choose whether food is hot, cold or no preference -->
+        <div class="row-container">
+            <div id="content" class='row' style="padding-bottom:10px">
+                <div>
+                <fieldset class="section_fit">
+                    <legend class="item">Hot food or cold?</legend>
+                    <div class="item">
+                    <input type="radio" id="no-pref" name="heat" value="no-pref">
+                    <label for="no-pref">Anything</label>
+                    </div>
+                    <div class="item">
+                    <input type="radio" id="solid" name="heat" value="hot">
+                    <label for="solid">Hot</label>
+                    </div>
+                    <div class="item">
+                    <input type="radio" id="soft" name="heat" value="cold">
+                    <label for="soft">Cold</label>
+                    </div>
+                </fieldset>
+                </div>
+            </div>
+            <div style="float:right" class='row'>
+                <img class="form_img" src="../static/assets/temp.png" height="180px" width="180px">
+            </div>
+        </div>
+        <!-- Enter the address and city you are located -->
+        <div class="row-container">
+            <div id="content" class="row">
+                <fieldset style="padding:3px 2.25rem">
+                        <legend class="item">Where are you?</legend>
+                        <div>
+                            <div class="row-container">
+                                <label class="item" style="padding-top:.65rem" for="address">Address: </label>
+                                <input name="address" placeholder="123 Main Street" type="text" minlength="10" maxlength="50">
+                            </div>
+                            <div class="row-container">
+                                <label class="item" style="padding-top:.65rem" for="city">City: </label>
+                                <input name="city" placeholder="New York City" type="text" minlength="3" maxlength="50">
+                            </div>
+                        </div>
+                    </fieldset>
+            </div>
+            <!-- Choose a time you want to eat. Time = search distance -->
+             <div id="phase1-time" class='item' style="text-align:center">
+                <fieldset style="padding:1.5rem 0">
+                        <legend class="item">When will you eat?</legend>
+                        <div id="time-padding" class="item">
+                        <input type="radio" id="upto30" name="time" value="upto30">
+                        <label for="upto30"> < 30 min.</label>
+                        </div>
+                        <div id="time-padding" class="item">
+                        <input type="radio" id="from1-2" name="time" value="from1-2">
+                        <label for="solid">1-2 hours</label>
+                        </div>
+                        <div id="time-padding" class="item">
+                        <input type="radio" id="over2" name="time" value="over2">
+                        <label for="soft">2 hours +</label>
+                        </div>
+                    </fieldset>
+            </div>
+        </div>
+        <div id="p1-button-container">
+            <input class="def-button" id="phase1-button" type="submit" value="Submit">
+        </div>
+    </form>
+{% endblock %}
