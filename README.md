@@ -86,17 +86,16 @@ Within the next few months, I will improve the the contact page so that the emai
 
 ###### Future Improvements
 
-I plan to improve this project even after CS50.
+I plan to improve this project shortly.
 
-**Within the next 1-2 months:**
+**Within the next 3 months:**
 
-1. Replace CS50 library for SQL, upload to self-hosted location
-2. Add continent option
-3. Add country option
-4. Input errors block form submission via JavaScript instead of continuing to the next page and displaying errors.
-5. Add spiciness option
-6. Connect to food API **or** increase database size otherwise
-7. Improve contact form functionality
+1. Refactor code using Ruby on Rails
+2. Self-host for public availability
+3. Add spiciness option as well as continent and country options
+4. Input errors prevent form submission via JavaScript instead of continuing to the next page and displaying errors.
+5. Connect to food API for greater selection
+6. Improve contact form functionality
    1. Add confirmation email
    2. Customize sending email address
 
