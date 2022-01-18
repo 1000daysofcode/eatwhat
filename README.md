@@ -1,6 +1,8 @@
 # EatWhat?
 
-#### Video Demo: [EatWhat? Video Demo](https://youtu.be/8dbePBUvVkE) <https://youtu.be/8dbePBUvVkE>
+#### Video Demo: [EatWhat? Video Demo](https://youtu.be/8dbePBUvVkE) 
+
+A live demo is not currently available due to pending code rewrite into a different framework and language. See "Future Improvements" below for the details of planned changes.
 
 #### Description:
 
